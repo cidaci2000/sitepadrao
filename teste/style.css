@@ -1,0 +1,166 @@
+/* Estilos Gerais (Mobile First - Começando com estilos para telas pequenas) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6; /* Melhora a legibilidade */
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem; /* Padding ajustado para mobile */
+    text-align: center;
+}
+
+.cabecalho h1 {
+    margin: 0 0 10px 0; /* Espaçamento abaixo do título */
+    font-size: 1.8rem; /* Tamanho da fonte ajustado para mobile */
+}
+
+.cabecalho nav {
+    display: flex; /* Para centralizar ou organizar links */
+    flex-direction: column; /* Links um abaixo do outro em mobile */
+    align-items: center; /* Centraliza os links */
+}
+
+.cabecalho nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 0; /* Espaçamento entre os links em mobile */
+    font-weight: bold;
+    padding: 8px 0; /* Adiciona um padding para facilitar o clique */
+    width: 100%; /* Links ocupam a largura total para mobile */
+}
+
+.cabecalho nav a:hover {
+    text-decoration: underline;
+    background-color: #555; /* Efeito hover */
+}
+
+/* Conteúdo Principal (Produtos) */
+.conteudo-principal {
+    display: grid;
+    /* Em mobile, apenas uma coluna de produtos */
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.produtos {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.produtos h2 {
+    margin-top: 0;
+    color: #555;
+    font-size: 1.5rem; /* Ajuste para mobile */
+}
+
+.comprar {
+    margin-top: 15px;
+}
+
+.comprar a {
+    display: block; /* O botão ocupa a largura total em mobile */
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px; /* Um pouco mais de padding para o botão */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem; /* Tamanho da fonte do botão */
+}
+
+.comprar a:hover {
+    background-color: #0056b3;
+}
+
+/* Rodapé (se você adicionar um) */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+
+/* Media Queries para Responsividade */
+
+/* Telas médias (Ex: Tablets) - 768px ou mais */
+@media (min-width: 768px) {
+    .cabecalho {
+        display: flex;
+        justify-content: space-between; /* Espaço entre o título e a navegação */
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    .cabecalho h1 {
+        margin: 0;
+        font-size: 2.2rem;
+    }
+
+    .cabecalho nav {
+        flex-direction: row; /* Links lado a lado */
+    }
+
+    .cabecalho nav a {
+        margin: 0 15px; /* Espaçamento horizontal entre os links */
+        padding: 0; /* Remove padding vertical extra */
+        width: auto; /* Links voltam a ter largura automática */
+    }
+
+    .conteudo-principal {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para tablets */
+    }
+
+    .produtos h2 {
+        font-size: 1.6rem;
+    }
+
+    .comprar a {
+        display: inline-block; /* Botão volta a ser inline-block */
+        padding: 10px 20px;
+    }
+}
+
+/* Telas grandes (Ex: Desktops) - 1024px ou mais */
+@media (min-width: 1024px) {
+    .cabecalho h1 {
+        font-size: 2.5rem;
+    }
+
+    .conteudo-principal {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 3 ou mais colunas para desktops */
+        gap: 30px; /* Mais espaço entre produtos */
+        padding: 30px;
+    }
+
+    .produtos h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Outros ajustes finos */
+/* Garante que imagens (se você as tiver) sejam responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove espaço extra abaixo de imagens */
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOJA - Sua Melhor Opção de Compras Online</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <h1><b>LOJA</b></h1>
+        </div>
+        <nav class="menu-navegacao">
+            <a href="home.html">HOME</a>
+            <a href="produto.html">PRODUTOS</a>
+            <a href="sobre.html">SOBRE NÓS</a>
+            <a href="contato.html">CONTATO</a>
+            <a href="#" class="carrinho"><i class="fas fa-shopping-cart"></i> (0)</a>
+        </nav>
+        <button class="menu-mobile-toggle" aria-label="Abrir Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <main class="conteudo-principal">
+        <section class="hero-banner">
+            <div class="hero-conteudo">
+                <h2>Novidades Chegando!</h2>
+                <p>Descubra as últimas tendências e ofertas exclusivas na LOJA.</p>
+                <a href="produto.html" class="btn-cta">Ver Produtos Agora</a>
+            </div>
+        </section>
+
+        <section class="produtos-destaque">
+            <h3>Produtos em Destaque</h3>
+            <div class="lista-produtos">
+                <div class="produto-card">
+                    <img src="images.jpeg" alt="Nome do Produto A">
+                    <h4>Produto Incrível A</h4>
+                    <p class="preco">R$ 99,90</p>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+                <div class="produto-card">
+                    <img src="images.jpeg" alt="Nome do Produto B">
+                    <h4>Item Fantástico B</h4>
+                    <p class="preco">R$ 149,90</p>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+                <div class="produto-card">
+                    <img src="images.jpeg" alt="Nome do Produto C">
+                    <h4>Peça Essencial C</h4>
+                    <p class="preco">R$ 79,90</p>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+            <div class="ver-mais">
+                <a href="produtos.html" class="btn-secundario">Ver Todos os Produtos</a>
+            </div>
+        </section>
+
+        <section class="beneficios">
+            <h3>Por Que Escolher a LOJA?</h3>
+            <div class="lista-beneficios">
+                <div class="beneficio-item">
+                    <i class="fas fa-truck"></i>
+                    <h4>Frete Rápido</h4>
+                    <p>Entrega em todo o Brasil com agilidade e segurança.</p>
+                </div>
+                <div class="beneficio-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Compra Segura</h4>
+                    <p>Seus dados protegidos e transações criptografadas.</p>
+                </div>
+                <div class="beneficio-item">
+                    <i class="fas fa-headset"></i>
+                    <h4>Suporte 24/7</h4>
+                    <p>Atendimento dedicado para tirar suas dúvidas a qualquer hora.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-newsletter">
+            <h3>Fique por Dentro das Novidades!</h3>
+            <p>Receba ofertas exclusivas e atualizações diretamente no seu e-mail.</p>
+            <form class="form-newsletter">
+                <input type="email" placeholder="Seu e-mail" required>
+                <button type="submit" class="btn-cta">Inscrever-se</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <div class="rodape-secao">
+                <h4>LOJA</h4>
+                <ul>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                </ul>
+            </div>
+            <div class="rodape-secao">
+                <h4>Atendimento</h4>
+                <ul>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Trocas e Devoluções</a></li>
+                </ul>
+            </div>
+            <div class="rodape-secao">
+                <h4>Redes Sociais</h4>
+                <div class="redes-sociais">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="direitos-autorais">
+            <p>&copy; 2025 LOJA. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButton = document.querySelector('.menu-mobile-toggle');
+            const navMenu = document.querySelector('.menu-navegacao');
+
+            if (toggleButton && navMenu) {
+                toggleButton.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
